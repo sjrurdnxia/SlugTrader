@@ -12,19 +12,21 @@ public class Car {
     private Long id;
     private String make;
     private String model;
-    private int manufactureYear;  // Rename from 'year' to 'manufactureYear'
+    private int manufactureYear;
     private double price;
     private Long ownerId;
+    private String picture;
 
     public Car() {}
 
-    public Car(Long id, String make, String model, int manufactureYear, double price, Long ownerId) {
+    public Car(Long id, String make, String model, int manufactureYear, double price, Long ownerId, String picture) {
         this.id = id;
         this.make = make;
         this.model = model;
         this.manufactureYear = manufactureYear;
         this.price = price;
         this.ownerId = ownerId;
+        this.picture = picture;
     }
 
     // Getters and Setters
@@ -74,5 +76,13 @@ public class Car {
 
     public void setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 }

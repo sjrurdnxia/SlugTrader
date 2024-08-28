@@ -47,9 +47,4 @@ public class CarController {
         carService.deleteCar(id);
         return ResponseEntity.noContent().build();
     }
-
-    @GetMapping("/owner/{ownerId}")
-    public List<Car> getCarsByOwnerId(@PathVariable Long ownerId) {
-        return carService.getCarsByOwnerId(ownerId);
-    }
 }
