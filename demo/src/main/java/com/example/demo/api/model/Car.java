@@ -1,20 +1,35 @@
 package com.example.demo.api.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "car")
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "make")
     private String make;
+
+    @Column(name = "model")
     private String model;
+
+    @Column(name = "manufacture_year")
     private int manufactureYear;
+
+    @Column(name = "price")
     private double price;
+
+    @Column(name = "owner_id")
     private Long ownerId;
+
+    @Column(name = "picture")
     private String picture;
 
     public Car() {}
