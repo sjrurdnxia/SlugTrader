@@ -43,3 +43,5 @@ public class CarService {
         carRepository.deleteById(id);  // Delete the car by id
     }
 }
+
+
